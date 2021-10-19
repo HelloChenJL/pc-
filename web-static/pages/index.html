@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="./index.bundle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>静态页面</title>
+</head>
+<body>
+  <h1>静态页面</h1>
+</body>
+</html>
+<!-- vite比webpack好的地方就是少了一层转化直接将代码传递到h5页面中，所以速度快 -->
+<!--发布页面对于我们有两种比较适用的，nodejs的express和nginx-->
+<!-- 模块的形式 rollup vite  使用module和import导入-->
+<script type = "module">//使用module的话得发布
+  console.log("1000")
+  import{A}from "./index.js"
+  console.log(A.name)
+</script>
+<!-- //传统的方式webpack  后台替转封装换了所以直接用 得在head里导入js文件-->
+<script >
+  console.log("1000")
+  console.log(A.name)//li
+</script>
